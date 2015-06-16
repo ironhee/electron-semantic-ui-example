@@ -1,0 +1,23 @@
+{
+  "name": "electron-semantic-ui-example",
+  "version": "0.0.0",
+  "authors": [
+    "ironhee <leechulhee95@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "semantic-ui": "~1.12.3"
+  },
+  "overrides": {
+    "semantic-ui": {
+      "main": []
+    }
+  }
+}
