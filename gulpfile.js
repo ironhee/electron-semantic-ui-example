@@ -32,14 +32,13 @@ function webpackLogger(callback) {
 
 gulp.task('default', ['watch']);
 
-gulp.task('watch', function(callback) {
+gulp.task('watch', function() {
   runSequence(
     'build',
     [
       'watch-src',
       'watch-vendor'
-    ],
-    callback
+    ]
   );
 });
 
@@ -66,6 +65,7 @@ gulp.task('build-vendor', [
 
 gulp.task('watch-src', [
   'watch-src:js',
+  'watch-src:css',
   'watch-src:html'
 ]);
 
@@ -78,11 +78,11 @@ gulp.task('watch-src:js', function() {
 });
 
 gulp.task('watch-src:css', function() {
-  gulp.watch('./src/less/**/*' ['build-src:css']);
+  gulp.watch('./src/less/**/*', ['build-src:css']);
 });
 
 gulp.task('watch-src:html', function() {
-  gulp.watch('./src/html/**/*' ['build-src:html']);
+  gulp.watch('./src/html/**/*', ['build-src:html']);
 });
 
 gulp.task('build-src:js', function(callback) {

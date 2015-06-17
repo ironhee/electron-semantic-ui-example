@@ -1,13 +1,14 @@
 import React from 'react';
-import Router, { HashLocation, Route, DefaultRoute } from 'react-router';
+import Router, { HashLocation, Route } from 'react-router';
 import App from 'components/App';
 import IndexSite from 'components/site/IndexSite';
+import CommentSite from 'components/site/CommentSite';
 
 
 let routes = (
   <Route handler={ App }>
-    <DefaultRoute handler={ IndexSite }/>
     <Route name="index" path="/" handler={ IndexSite }/>
+    <Route name="comment" path="/comment" handler={ CommentSite }/>
   </Route>
 );
 

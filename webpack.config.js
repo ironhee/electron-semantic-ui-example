@@ -6,6 +6,7 @@ var pkg = require('./package.json');
 
 
 module.exports = {
+  devtool: 'eval',
   resolve: {
     modulesDirectories: ['src/js'],
     extensions: ['', '.es6', '.js']

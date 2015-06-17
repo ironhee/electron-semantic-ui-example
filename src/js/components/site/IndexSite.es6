@@ -7,7 +7,9 @@ export default React.createClass({
 
   render() {
     return (
-      <div>index</div>
+      <div>
+        <h1>Hello world</h1>
+      </div>
     );
   }
 

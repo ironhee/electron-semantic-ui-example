@@ -14,9 +14,12 @@ export default React.createClass({
   render() {
     return (
       <div className="site">
-        <div className="ui secondary pointing menu">
+        <div className="ui blue inverted menu">
           <Link to="index" className="item">
             <i className="home icon"></i> Home
+          </Link>
+          <Link to="comment" className="item">
+            <i className="comment icon"></i> Comment
           </Link>
         </div>
         <div className="main container" ref="main">
