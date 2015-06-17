@@ -4,7 +4,7 @@
   "description": "electron-semantic-ui-example",
   "main": "main.js",
   "scripts": {
-    "dev": "node_modules/electron-prebuilt/cli.js ./"
+    "dev": "node_modules/electron-prebuilt/cli.js ./ --dev"
   },
   "author": "ironhee <leechulhee95@gmail.com>",
   "license": "MIT",

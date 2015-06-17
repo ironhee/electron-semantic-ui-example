@@ -24,8 +24,10 @@ app.on('ready', function() {
   // and load the index.html of the app.
   mainWindow.loadUrl('file://' + __dirname + '/dist/main.html');
 
-  // Open the devtools.
-  mainWindow.openDevTools();
+  if (process.argv.indexOf('--dev') >= 0) {
+    // Open the devtools.
+    mainWindow.openDevTools();
+  }
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function() {
