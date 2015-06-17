@@ -3,13 +3,8 @@ import low from 'lowdb';
 import _ from 'underscore';
 
 
-let db = low('db.json');
+let db = low();
 db._.mixin(underscoreDB);
-
-
-setInterval(() => {
-  db.save();
-}, 5000);
 
 
 export default function DBMixin(type) {

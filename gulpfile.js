@@ -9,6 +9,7 @@ var rename = require('gulp-rename');
 var less = require('gulp-less');
 var filter = require('gulp-filter');
 var clean = require('gulp-clean');
+var shell = require('gulp-shell');
 var sourcemaps = require('gulp-sourcemaps');
 var webpack = require('webpack');
 var webpackConfig = require('./webpack.config');
@@ -130,3 +131,25 @@ gulp.task('clean:dist', function() {
   return gulp.src('dist')
     .pipe(clean());
 });
+
+gulp.task('build-electron', function(callback) {
+  runSequence(
+    'build',
+    'build-electron:clean',
+    'build-electron:src',
+    callback
+  );
+});
+
+gulp.task('build-electron:clean', function() {
+  return gulp.src('Electron.app')
+    .pipe(clean());
+});
+
+gulp.task('build-electron:src', shell.task([
+  'cp -a node_modules/electron-prebuilt/dist/Electron.app ./',
+  'mkdir Electron.app/Contents/Resources/app',
+  'cp main.js Electron.app/Contents/Resources/app/',
+  'cp package.json Electron.app/Contents/Resources/app/',
+  'cp -a dist Electron.app/Contents/Resources/app/'
+]));

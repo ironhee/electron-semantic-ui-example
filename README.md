@@ -1,7 +1,7 @@
 # Electron, Semantic-UI Example
 Start developing Electron application easily with the included tooling.
 
-Using gulp, webpack, semantic-ui, react, reflux, lowdb, less, babel(es6)
+Using gulp, webpack, semantic-ui, react, reflux, lowdb, less, babel(es6), eslint
 
 # Install
 ```

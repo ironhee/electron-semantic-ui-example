@@ -21,6 +21,7 @@
     "gulp-filter": "^2.0.2",
     "gulp-less": "^3.0.3",
     "gulp-rename": "^1.2.2",
+    "gulp-shell": "^0.4.2",
     "gulp-sourcemaps": "^1.5.2",
     "gulp-util": "^3.0.5",
     "json-loader": "^0.5.2",
